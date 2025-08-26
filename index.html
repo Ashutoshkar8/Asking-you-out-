@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Do You Like Me?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Music -->
+  <audio id="bg-music" loop>
+    <source src="music/Janiye_192(PagalWorld.com.sb).mp3" type="audio/mpeg" />
+    </audio>
+  <button id="music-toggle">▶ Play</button>
+
+  <div class="container">
+    <!-- Page 1 -->
+    <div id="page1" class="page active">
+      <h1>Do you like me, Madhu? 🤗</h1>
+      <div class="btn">
+        <button onclick="playMusic(); showPage('yes')">Yes</button>
+        <button onclick="playMusic(); showPage('page2')">No</button>
+      </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div id="page2" class="page">
+      <h1>Are you really sure? 🥺</h1>
+      <div class="btn">
+        <button onclick="showPage('yes')">Yes</button>
+        <button onclick="showPage('page3')">No</button>
+      </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div id="page3" class="page">
+      <h1>Think again… 😢</h1>
+      <div class="btn">
+        <button onclick="showPage('yes')">Yes</button>
+        <button onclick="showPage('page4')">No</button>
+      </div>
+    </div>
+
+    <!-- Final Page -->
+    <div id="page4" class="page">
+      <h1>Oops! Now you can’t say No 😆</h1>
+      <div class="btn">
+        <button onclick="showPage('yes')">Yes ❤️</button>
+        <button id="tricky-no">No</button>
+      </div>
+    </div>
+
+    <!-- Yes Page -->
+    <div id="yes" class="page">
+      <h1>Yay! She said YES ❤️</h1>
+      <p>I the happiest now! 🎉</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
